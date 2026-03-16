@@ -95,7 +95,7 @@ def get_instock_products():
     available_products = []
 
     for product in products:
-        if product["in_stock"] == True:
+        if product["in_stock"]:
             available_products.append(product)
 
     return {
@@ -116,7 +116,7 @@ def store_summary():
 
     for product in products:
 
-        if product["in_stock"] == True:
+        if product["in_stock"]:
             in_stock += 1
         else:
             out_stock += 1
